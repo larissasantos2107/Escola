@@ -1,5 +1,5 @@
 .container_home {
-    background-color: rgb(245, 166, 245);
+    background-color: rgb(252, 172, 252);
     width: 800px;
     height: 500px;
     display: flex;
@@ -65,7 +65,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(244, 114, 248);
+    background-color: #d874f7;
     width: 95%;
     height: 50px;
     border-radius: 10px;

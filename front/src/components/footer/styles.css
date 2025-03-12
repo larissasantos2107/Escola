@@ -1,5 +1,5 @@
 .container_footer {
-    background-color: #f49eff;
+    background-color: #ffbdff;
     width: 97vw;
     height: 150px;
     display: flex;
@@ -10,8 +10,8 @@
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
-    box-shadow: 0 5px 15px rgb(224, 114, 228);
+    color: #9a02c0;
+    box-shadow: 0 5px 15px #e072e4;
     border-radius: 5px;
     padding: 20px;
     flex-direction: column;
@@ -49,14 +49,14 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #eb45eb;
+    background: #d174fc;
     padding: 8px;
     border-radius: 50%;
     transition: 0.3s;
   }
   
   .social-icons a:hover {
-    background: #c109c7;
+    background: #7c0899;
   }
   
   .school-info {

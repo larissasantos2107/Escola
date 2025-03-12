@@ -79,31 +79,11 @@ export default function Home() {
 
     }
 
-    const atualizar = async (professorAtualizado)=>{
-        console.log("Professor atualizado: ", professorAtualizado)
-        try {
-            const response = await axios.put(`http://127.0.0.1:8000/api/professor/${professorAtualizado.id}`,
-                {
-                    ni: professorAtualizado.ni,
-                    nome: professorAtualizado.nome,
-                    email: professorAtualizado.email,
-                    tel: professorAtualizado.tel,
-                    ocupacao: professorAtualizado.ocupacao
-                },{
-                    headers:{
-                        Authorization: `Bearer ${token}`
-                    }
-                }
-            )
-            console.log("Dados atualizados com sucesso!", response.data)
-            setDados(dados.map((professor)=> professor.id === professorAtualizado.id ? professorAtualizado : professor))
-            setModalOpen(false)
-        } catch (error) {
-            console.error(error)
-        }
-
+    const atualizar = async (professor)=>{
+        setProfessorSelecionado(professor)
+        setModalOpen(true)
     }
-
+     
     return (
         <div >
             <Header />
@@ -127,7 +107,7 @@ export default function Home() {
                                 <tr key={professor.id} className="campos">
                                     <td className="icons">
                                         <div className="col1">
-                                            <FaEdit className="edit" onClick={()=> atualizar(professorSelecionado) } />
+                                            <FaEdit className="edit" onClick={()=> atualizar(professor) } />
                                         </div>
                                         <div className="col2">
                                             <FaTrash className="delete" onClick={() => apagar(professor.id)} />
@@ -164,9 +144,6 @@ export default function Home() {
                     isOpen={modalOpen}
                     onClose={()=>setModalOpen(false)}
                     professorSelecionado={professorSelecionado}
-                    setProfessorSelecionado={setProfessorSelecionado}
-                    criar={criar}
-                    atualizar={atualizar}
                 />
             </div>
             <Footer />

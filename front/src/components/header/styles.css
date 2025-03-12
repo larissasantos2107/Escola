@@ -1,5 +1,5 @@
 .container_header{
-    background-color: #f49eff;
+    background-color: #ffbdff;
     width: 97vw;
     height: 150px;
     display: flex;
@@ -11,10 +11,10 @@
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: 80px;
-    color: white;
+    color: #9a02c0;
     border-radius: 5px;
     padding: 20px;
-    box-shadow: 0 5px 5px #e954fd;
+    box-shadow: 0 5px 5px #ef84fd;
 }
 
 .nav{
