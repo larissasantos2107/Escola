@@ -24,7 +24,7 @@
     display: flex;
 }
 
-.ni-modal{
+.disciplina-modal{
     width: 300px;
     padding: 5px;
     margin-top: 10px;
@@ -33,7 +33,7 @@
     border-radius: 5px;
 }
 
-.nome-modal{
+.codigo-modal{
     width: 300px;
     padding: 5px;
     margin-top: 10px;
@@ -42,25 +42,7 @@
     border-radius: 5px;
 }
 
-.email-modal{
-    width: 300px;
-    padding: 5px;
-    margin-top: 10px;
-    height: 30px;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.tel-modal{
-    width: 300px;
-    padding: 5px;
-    margin-top: 10px;
-    height: 30px;
-    font-size: 18px;
-    border-radius: 5px;
-}
-
-.ocupacao-modal{
+.cargaHoraria-modal{
     width: 300px;
     padding: 5px;
     margin-top: 10px;

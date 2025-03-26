@@ -1,18 +1,19 @@
-.container_home {
-    background-color: rgb(252, 172, 252);
-    width: 800px;
-    height: 500px;
+
+.container_professor {
+    background-color: #fcacfc;
+    width: 50%; /* Aumentei a largura */
+    height: 500px; /* Aumentei a altura */
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    /* top: 50%;  */
     left: 50%; 
     transform: translate(-50%, -50%); 
     border-radius: 5px;
-    padding: 20px;
+    padding: 30px; /* Aumentei o padding */
 }
+
 
 .campos{
     display: flex;
@@ -36,19 +37,20 @@
 }
 .col3{
     /* background-color: aqua; */
-    width: 35px;
+    width: 100px;
 }
 .col4{
     /* background-color: rgb(209, 197, 37); */
-    width: 130px;
+    width: 150px;
 }
 .col5{
     /* background-color: aqua; */
-    width: 200px;
+    width: 150px;
 }
 .col6{
-    /* background-color: rgb(209, 197, 37); */
-    width: 200px;
+    /* background-color: rgb(156, 151, 81); */
+    width: 160px;
+
 }
 .col7{
     /* background-color: aqua; */
@@ -58,6 +60,13 @@
 .col8{
     /* background-color: rgb(209, 197, 37); */
     width: 25px;
+}
+
+td {
+    display: table-cell;
+    vertical-align: inherit;
+    unicode-bidi: isolate;
+    width: -2px;
 }
 
 .footer_table{

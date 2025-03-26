@@ -1,6 +1,6 @@
-.container_disciplina {
+.container_curso {
     background-color: #fcacfc;
-    width: 45%;
+    width: 65%;
     height: 500px;
     display: flex;
     justify-content: space-between;
@@ -27,37 +27,50 @@
 
 .col1{
     /* background-color: aqua; */
-    width: 25px;
+    width: 20px;
 
 }
 .col2{
     /* background-color: rgb(209, 197, 37);  */
-    width: 25px;
+    width: 10px;
 }
-.col3{
+.col3_ambiente{
     /* background-color: aqua; */
-    width: 100px;
+    margin-right: 150px;
+    display: flex;
+    justify-content: center;
+    width: 0px;
 }
-.col4{
+.col4_ambiente{
     /* background-color: rgb(209, 197, 37); */
-    width: 250px;
+    width: 50px;
+    margin-right: 150px;
+
 }
-.col5{
+.col5_ambiente{
     /* background-color: aqua; */
     width: 200px;
+    margin-right: 10px;
+
 }
-.col6{
+.col6_ambiente{
     /* background-color: rgb(209, 197, 37); */
     width: 200px;
+    margin-right: 10px;
+
 }
-.col7{
+.col7_ambiente{
     /* background-color: aqua; */
-    width: 150px;
+    width: 200px;
+    margin-right: 10px;
+
 }
 
-.col8{
+.col8_ambiente{
     /* background-color: rgb(209, 197, 37); */
     width: 25px;
+    margin-right: 10px;
+
 }
 
 .footer_table{
@@ -104,4 +117,13 @@
     height: 30px;
     border-radius: 10px;
     padding-left: 5px;
+}
+
+.editt{
+    /* background-color: #74f78a; */
+}
+
+.deletee{
+    /* margin-left: 20px; */
+    /* background-color: aqua; */
 }

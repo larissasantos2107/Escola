@@ -2,45 +2,47 @@ import React, {useState} from "react";
 import './styles.css'
 import axios from "axios";
 
-const ModalDisciplina = ({
+const ModalSubjects
+ = ({
     isOpen,
     onClose,
-    disciplinaSelecionado,
+    DisciplinaSelecionado,
     setSeta,
     seta 
 
 })=>{
     if(!isOpen) return null
 
-    const [disciplina, setDiciplina] = useState(disciplinaSelecionado?.id || '')
-    const [codigo, setCodigo] = useState(disciplinaSelecionado?.ni || '')
-    const [cargaHoraria, setCargaHoraria] = useState(disciplinaSelecionado?.nome || '')
+    const [id, setId] = useState(DisciplinaSelecionado?.id || '')
+    const [disciplina, setDisciplina] = useState(DisciplinaSelecionado?.disciplina || '')
+    const [codigo, setCodigo] = useState(DisciplinaSelecionado?.codigo || '')
+    const [cargaHoraria, setCargaHoraria] = useState(DisciplinaSelecionado?.cargaHoraria || '')
     const token = localStorage.getItem('token')
 
     const handleSubmit = (e)=>{
         e.preventDefault()
         const novaDisciplina = {disciplina, codigo, cargaHoraria}
-        if(disciplinaSelecionado){
-            atualizar({...disciplinaSelecionado, ...novaDisciplina})
+        if(professorSelecionado){
+            atualizar({...DisciplinaSelecionado, ...novaDisciplina})
         }else{
             console.log("Teste nova disciplina: ", novaDisciplina)
             criar(novaDisciplina)
         }
     }
 
-    const newDisciplini = async() =>{
+    const newDisci = async() =>{
         try {
             await axios.post('http://127.0.0.1:8000/api/disciplina', 
                 {   disciplina: disciplina,
                     codigo: codigo,
-                    cargaHoraria: cargaHoraria
+                    cargaHoraria: cargaHoraria,
                 },{
                     headers:{
                         Authorization:`Bearer ${token}`
                     }
                 }
             )
-            console.log("prof inserido sucefful")
+            console.log("Disciplina inserido sucefful")
             setSeta(!seta)
             onClose(true)
         } catch (error) {
@@ -48,12 +50,12 @@ const ModalDisciplina = ({
         }
     }
 
-    const editDisciplini = async() =>{
+    const editDisci = async() =>{
         try {
-            await axios.put(`http://127.0.0.1:8000/api/disciplina/${disciplinaSelecionado.id}`, 
-                {  disciplina: disciplina,
+            await axios.put(`http://127.0.0.1:8000/api/disciplina/${DisciplinaSelecionado.id}`, 
+                {   disciplina: disciplina,
                     codigo: codigo,
-                    cargaHoraria: cargaHoraria
+                    cargaHoraria: cargaHoraria,
                 },{
                     headers:{
                         Authorization:`Bearer ${token}`
@@ -74,7 +76,7 @@ const ModalDisciplina = ({
                 <div className="head-modal">
                 <button className="close-button" onClick={onClose}>X</button>
                 </div>
-                <h2>{disciplinaSelecionado ? `Editar | ${disciplinaSelecionado.disciplina}` : "Cadastrar"}</h2>
+                <h2>{DisciplinaSelecionado ? `Editar | ${DisciplinaSelecionado.disciplina}` : "Cadastrar"}</h2>
                 <div className="body-modal">
                     <form onSubmit={handleSubmit}>
                         <div className="caixa1">
@@ -82,7 +84,7 @@ const ModalDisciplina = ({
                                 className="disciplina-modal"
                                 value={disciplina}
                                 placeholder="disciplina"
-                                onChange={(e)=>setDiciplina(e.target.value)}
+                                onChange={(e)=>setDisciplina(e.target.value)}
                             />
                             <input
                                 className="codigo-modal"
@@ -106,8 +108,8 @@ const ModalDisciplina = ({
                     <button 
                         className= "button-save" 
                         type="submit" 
-                        onClick={disciplinaSelecionado? editDisciplini : newDisciplini}>
-                        {disciplinaSelecionado ? "Atualizar" : "Salvar"}</button> 
+                        onClick={DisciplinaSelecionado? editDisci : newDisci}>
+                        {DisciplinaSelecionado ? "Atualizar" : "Salvar"}</button> 
                 </div>
             </div>
         </div>
@@ -115,4 +117,5 @@ const ModalDisciplina = ({
 }
 
 
-export default ModalDisciplina
+export default ModalSubjects
+

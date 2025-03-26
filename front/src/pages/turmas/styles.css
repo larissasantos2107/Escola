@@ -1,6 +1,6 @@
-.container_disciplina {
+.container_turma {
     background-color: #fcacfc;
-    width: 45%;
+    width: 35%;
     height: 500px;
     display: flex;
     justify-content: space-between;
@@ -34,17 +34,19 @@
     /* background-color: rgb(209, 197, 37);  */
     width: 25px;
 }
-.col3{
-    /* background-color: aqua; */
-    width: 100px;
+.col3_turma{
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
 }
-.col4{
+.col4_turma{
     /* background-color: rgb(209, 197, 37); */
-    width: 250px;
+    width: 150px;
 }
-.col5{
+.col5_turma{
     /* background-color: aqua; */
-    width: 200px;
+    width: 150px;
 }
 .col6{
     /* background-color: rgb(209, 197, 37); */
@@ -104,4 +106,13 @@
     height: 30px;
     border-radius: 10px;
     padding-left: 5px;
+}
+
+.edit{
+    /* background-color: #74f78a; */
+}
+
+.delete{
+    margin-left: 20px;
+    /* background-color: aqua; */
 }

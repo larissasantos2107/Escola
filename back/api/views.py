@@ -8,6 +8,12 @@ from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
 from .models import Disciplina
 from .serializer import DisciplinaSerializer
+from .models import Turma
+from .serializer import TurmaSerializer
+from .models import Ambiente
+from .serializer import AmbienteSerializer
+from .models import Curso
+from .serializer import CursoSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -25,6 +31,7 @@ def listar_professores(request):
         else:
             return Response(serializer.data, status=status.HTTP_400_BAD_REQUEST)
             
+# PROFESSORES
 
 class ProfessoresView(ListCreateAPIView):
     queryset = Professor.objects.all()
@@ -36,6 +43,8 @@ class ProfessoresDetailView(RetrieveUpdateDestroyAPIView):
     serializer_class = ProfessorSerializer
     permission_classes = [IsAuthenticated]
 
+# DISCIPLINA
+
 class DisciplinaView(ListCreateAPIView):
     queryset = Disciplina.objects.all()
     serializer_class = DisciplinaSerializer
@@ -45,3 +54,49 @@ class DisciplinaDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Disciplina.objects.all()
     serializer_class = DisciplinaSerializer
     permission_classes = [IsAuthenticated]
+
+# TURMA
+
+class TurmaView(ListCreateAPIView):
+    queryset = Turma.objects.all()
+    serializer_class = TurmaSerializer
+    permission_classes = [IsAuthenticated]    
+
+class TurmaDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Turma.objects.all()
+    serializer_class = TurmaSerializer
+    permission_classes = [IsAuthenticated]
+
+# AMBIENTE
+
+class AmbienteView(ListCreateAPIView):
+    queryset = Ambiente.objects.all()
+    serializer_class = AmbienteSerializer
+    permission_classes = [IsAuthenticated]    
+
+class AmbienteDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Ambiente.objects.all()
+    serializer_class = AmbienteSerializer
+    permission_classes = [IsAuthenticated]
+
+@api_view(['GET'])
+def get_periodo_choices(request):
+    return Response(Ambiente.PERIODO) 
+
+# CURSO
+
+class CursoView(ListCreateAPIView):
+    queryset = Curso.objects.all()
+    serializer_class = CursoSerializer
+    permission_classes = [IsAuthenticated]  
+
+
+class CursoDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = Curso.objects.all()
+    serializer_class = CursoSerializer
+    permission_classes = [IsAuthenticated]
+
+@api_view(['GET'])
+def get_tipo_curso_choices(request):
+    return Response(Curso.TIPO_CURSO)  
+

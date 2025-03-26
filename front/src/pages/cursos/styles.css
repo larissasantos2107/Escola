@@ -1,6 +1,6 @@
-.container_home {
-    background-color: rgb(252, 172, 252);
-    width: 800px;
+.container_curso {
+    background-color: #fcacfc;
+    width: 55%;
     height: 500px;
     display: flex;
     justify-content: space-between;
@@ -27,20 +27,23 @@
 
 .col1{
     /* background-color: aqua; */
-    width: 25px;
+    width: 20px;
 
 }
 .col2{
-    /* background-color: rgb(209, 197, 37); */
-    width: 25px;
+    /* background-color: rgb(209, 197, 37);  */
+    width: 10px;
 }
-.col3{
+.col3_cursos{
     /* background-color: aqua; */
-    width: 35px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
 }
 .col4{
     /* background-color: rgb(209, 197, 37); */
-    width: 130px;
+    width: 200px;
 }
 .col5{
     /* background-color: aqua; */
@@ -52,7 +55,7 @@
 }
 .col7{
     /* background-color: aqua; */
-    width: 150px;
+    width: 200px;
 }
 
 .col8{
@@ -104,4 +107,13 @@
     height: 30px;
     border-radius: 10px;
     padding-left: 5px;
+}
+
+.editt{
+    /* background-color: #74f78a; */
+}
+
+.deletee{
+    /* margin-left: 20px; */
+    /* background-color: aqua; */
 }
