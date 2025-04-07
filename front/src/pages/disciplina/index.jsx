@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { FaEdit, FaTrash, FaPlus, FaSearch } from 'react-icons/fa'
-import './styles.css'
+import './sttyles.css'
 import Header from "../../components/header";
 import Footer from "../../components/footer";
 import ModalSubjects from "../../components/modals/subject";
@@ -92,12 +92,12 @@ export default function Disciplina() {
                     <table>
                         <thead>
                             <tr className="icons">
-                                <div className="col1"></div>
-                                <div className="col2"></div>
-                                <div className="col3"><th>ID</th></div>
-                                <div className="col4"><th>DISCIPLINA</th></div>
-                                <div className="col5"><th>CODIGO</th></div>
-                                <div className="col5"><th>CARGA HORARIA</th></div>
+                                <div className="col1_d"></div>
+                                <div className="col2_d"></div>
+                                <div className="col3_d"><th>ID</th></div>
+                                <div className="col4_d"><th>DISCIPLINA</th></div>
+                                <div className="col5_d"><th>CODIGO</th></div>
+                                <div className="col6_d"><th>CH</th></div>
                                 
                             </tr>
                         </thead>
@@ -105,18 +105,18 @@ export default function Disciplina() {
                             {dados.map((disciplina) => (
                                 <tr key={disciplina.id} className="campos">
                                     <td className="icons">
-                                        <div className="col1">
+                                        <div className="col1_d">
                                             <FaEdit className="edit" onClick={() => atualizar(disciplina)}/>
                                         </div>
-                                        <div className="col2">
-                                            <FaTrash className="delete" onClick={() => apagar(disciplina.id)} />
+                                        <div className="col2_d">
+                                            <FaTrash onClick={() => apagar(disciplina.id)} />
                                         </div>
 
                                     </td>
-                                    <div className="col3"><td>{disciplina.id}</td></div>
-                                    <div className="col4"><td>{disciplina.disciplina}</td></div>
-                                    <div className="col5"><td>{disciplina.codigo}</td></div>
-                                    <div className="col6"><td>{disciplina.cargaHoraria}</td></div>
+                                    <div className="col3_d"><td>{disciplina.id}</td></div>
+                                    <div className="col4_d"><td>{disciplina.disciplina}</td></div>
+                                    <div className="col5_d"><td>{disciplina.codigo}</td></div>
+                                    <div className="col6_d"><td>{disciplina.cargaHoraria}</td></div>
                                 </tr>
                             ))}
                         </tbody>

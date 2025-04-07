@@ -94,14 +94,14 @@ export default function Professor() {
                     <table>
                         <thead>
                             <tr className="icons">
-                                <div className="col1"></div>
-                                <div className="col2"></div>
-                                <div className="col3"><th>ID</th></div>
-                                <div className="col4"><th>NI</th></div>
-                                <div className="col5"><th>NOME</th></div>
-                                <div className="col6"><th>EMAIL</th></div>
-                                <div className="col7"><th>TELEFONE</th></div>
-                                <div className="col8"><th>OC</th></div>
+                                <div className="col1_professor"></div>
+                                <div className="col2_professor"></div>
+                                <div className="col3_professor"><th>ID</th></div>
+                                <div className="col4_professor"><th>NI</th></div>
+                                <div className="col5_professor"><th>NOME</th></div>
+                                <div className="col6_professor"><th>EMAIL</th></div>
+                                <div className="col7_professor"><th>TELEFONE</th></div>
+                                <div className="col8_professor"><th>OC</th></div>
                             </tr>
                         </thead>
                         <tbody> 
@@ -116,12 +116,12 @@ export default function Professor() {
                                         </div>
 
                                     </td>
-                                    <div className="col3"><td>{professor.id}</td></div>
-                                    <div className="col4"><td>{professor.ni}</td></div>
-                                    <div className="col5"><td>{professor.nome}</td></div>
-                                    <div className="col6"><td>{professor.email}</td></div>
-                                    <div className="col7"><td>{professor.tel}</td></div>
-                                    <div className="col8"><td>{professor.ocupacao}</td></div>
+                                    <div className="col3_professor"><td>{professor.id}</td></div>
+                                    <div className="col4_professor"><td>{professor.ni}</td></div>
+                                    <div className="col5_professor"><td>{professor.nome}</td></div>
+                                    <div className="col6_professor"><td>{professor.email}</td></div>
+                                    <div className="col7_professor"><td>{professor.tel}</td></div>
+                                    <div className="col8_professor"><td>{professor.ocupacao}</td></div>
                                 </tr>
                             ))}
                         </tbody>

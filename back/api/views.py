@@ -14,6 +14,9 @@ from .models import Ambiente
 from .serializer import AmbienteSerializer
 from .models import Curso
 from .serializer import CursoSerializer
+from rest_framework import generics
+from django.contrib.auth.models import User
+from .serializer import UserSerializer
 
 
 @api_view(['GET', 'POST'])
@@ -100,3 +103,9 @@ class CursoDetailView(RetrieveUpdateDestroyAPIView):
 def get_tipo_curso_choices(request):
     return Response(Curso.TIPO_CURSO)  
 
+
+# SinUp
+
+class SignUpView(generics.CreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

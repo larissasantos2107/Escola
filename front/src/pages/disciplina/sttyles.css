@@ -1,6 +1,7 @@
 .container_disciplina {
     background-color: #fcacfc;
     width: 45%;
+    min-width: 600px;
     height: 500px;
     display: flex;
     justify-content: space-between;
@@ -25,38 +26,34 @@
     flex-direction: row;
 }
 
-.col1{
-    /* background-color: aqua; */
+.col1_d{
     width: 25px;
 
 }
-.col2{
-    /* background-color: rgb(209, 197, 37);  */
-    width: 25px;
+.col2_d{
+    width: 30px;
+
 }
-.col3{
-    /* background-color: aqua; */
-    width: 100px;
+.col3_d{
+    display: flex;
+    justify-content: center;
+    width: 50px;
 }
-.col4{
-    /* background-color: rgb(209, 197, 37); */
-    width: 250px;
+.col4_d{
+    margin-left: 50px;
+    width: 300px;
 }
-.col5{
-    /* background-color: aqua; */
-    width: 200px;
+.col5_d{
+    width: 150px;
 }
-.col6{
-    /* background-color: rgb(209, 197, 37); */
-    width: 200px;
+.col6_d{
+    width: 70px;
 }
-.col7{
-    /* background-color: aqua; */
+.col7_d{
     width: 150px;
 }
 
-.col8{
-    /* background-color: rgb(209, 197, 37); */
+.col8_d{
     width: 25px;
 }
 
@@ -104,4 +101,12 @@
     height: 30px;
     border-radius: 10px;
     padding-left: 5px;
+}
+
+.editt{
+    background-color: #74f78a;
+}
+
+.delete{
+    background-color: aqua;
 }

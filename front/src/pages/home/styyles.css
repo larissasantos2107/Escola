@@ -3,54 +3,31 @@
     width: 400px;
     height: 400px;
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
     align-items: center;
     position: absolute;
-    /* top: 50%;  */
-    left: 50%; 
-    transform: translate(-50%, -50%); 
+    left: 50%;
+    transform: translate(-50%, -50%);
     border-radius: 5px;
     padding: 20px;
 }
 
-
-.footer_table{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    background-color: rgb(148, 78, 206);
-    width: 95%;
-    height: 50px;
-    border-radius: 10px;
+.button_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Definindo duas colunas */
+    gap: 10px; /* Espaço entre os botões */
+    width: 100%; /* Garante que os botões ocupem toda a largura */
+    max-width: 300px; /* Limita a largura da área dos botões */
+    margin-top: 20px;
 }
 
-.button{
+.button {
     background-color: white;
-}
-
-.button{
     border-radius: 8px;
     border: 1px solid transparent;
     padding: 0.6em 1.2em;
     font-size: 1em;
     font-family: inherit;
     cursor: pointer;
-    transition: border-color 0.25s;
-    justify-content: center;
-}
-
-.id input{
-    width: 30px;
-    height: 30px;
-    border-radius: 10px;
-    padding-left: 5px;
-}
-
-.nome input{
-    width: 300px;
-    height: 30px;
-    border-radius: 10px;
-    padding-left: 5px;
+    text-align: center; /* Garante que o texto esteja centralizado */
 }

@@ -13,13 +13,15 @@ export default function Home() {
         <div>
             <Header/>
             <div className="container_home">
-                <h1>Home</h1>
-                <button onClick={()=>navigate('/professor')}>Teachers</button>
-                <button onClick={()=>navigate('/disciplinas')}>Subjects</button>
-                <button onClick={()=>navigate('/turmas')}>Turmas</button>
-                <button onClick={()=>navigate('/cursos')}>Cursos</button>
-                <button onClick={()=>navigate('/ambientes')}>Ambientes</button>
+                 <h1>Home</h1>
+                        <div className="button_grid">
+                        <button onClick={()=>navigate('/professor')}>Teachers</button>
+                        <button onClick={()=>navigate('/disciplinas')}>Subjects</button>
+                        <button onClick={()=>navigate('/turmas')}>Turmas</button>
+                        <button onClick={()=>navigate('/cursos')}>Cursos</button>
+                        <button onClick={()=>navigate('/ambientes')}>Ambientes</button>
             </div>
+        </div>
             <Footer/>
         </div>
     )
@@ -32,3 +34,13 @@ export default function Home() {
 
 
 
+<div className="container_home">
+                 <h1>Home</h1>
+                        <div className="button_grid">
+                        <button onClick={()=>navigate('/professor')}>Teachers</button>
+                        <button onClick={()=>navigate('/disciplinas')}>Subjects</button>
+                        <button onClick={()=>navigate('/turmas')}>Turmas</button>
+                        <button onClick={()=>navigate('/cursos')}>Cursos</button>
+                        <button onClick={()=>navigate('/ambientes')}>Ambientes</button>
+            </div>
+        </div>

@@ -1,9 +1,11 @@
+from .views import SignUpView
 from django.urls import path
 from .views import *
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+from .views import SignUpView
 
 urlpatterns = [
     # Professores
@@ -37,6 +39,12 @@ urlpatterns = [
     path('curso', CursoView.as_view()),
     path('curso/<int:pk>', CursoDetailView.as_view()),
     path('tipo_curso_choices', get_tipo_curso_choices),
+
+    #SingUp
+
+    path('signup/', SignUpView.as_view(), name='signup'),
+    path('login/', TokenObtainPairView.as_view(), name='login'),
+    path('refresh/', TokenRefreshView.as_view(), name='token_refresh'),
     
    
 ]

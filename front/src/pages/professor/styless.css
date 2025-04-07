@@ -1,7 +1,7 @@
 
 .container_professor {
     background-color: #fcacfc;
-    width: 50%; /* Aumentei a largura */
+    width: 55%; /* Aumentei a largura */
     height: 500px; /* Aumentei a altura */
     display: flex;
     justify-content: space-between;
@@ -26,38 +26,41 @@
     flex-direction: row;
 }
 
-.col1{
+.col1_professor{
     /* background-color: aqua; */
-    width: 25px;
+    width: 2px;
 
 }
-.col2{
+.col2_professor{
     /* background-color: rgb(209, 197, 37); */
     width: 25px;
 }
-.col3{
+.col3_professor{
     /* background-color: aqua; */
-    width: 100px;
+    margin-left: 0px;
+    display: flex;
+    justify-content: center;
+    width: 150px;
 }
-.col4{
+.col4_professor{
     /* background-color: rgb(209, 197, 37); */
     width: 150px;
 }
-.col5{
+.col5_professor{
     /* background-color: aqua; */
     width: 150px;
 }
-.col6{
+.col6_professor{
     /* background-color: rgb(156, 151, 81); */
     width: 160px;
 
 }
-.col7{
+.col7_professor{
     /* background-color: aqua; */
     width: 150px;
 }
 
-.col8{
+.col8_professor{
     /* background-color: rgb(209, 197, 37); */
     width: 25px;
 }

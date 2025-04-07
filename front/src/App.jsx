@@ -6,7 +6,8 @@ import Professor from "./pages/professor";
 import Disciplina from "./pages/disciplina";
 import Turmas from "./pages/turmas";
 import Cursos from "./pages/cursos";
-import Ambientes from "./pages/ambientes"
+import Ambientes from "./pages/ambientes";
+import SignUp from "./pages/signup";
 
 export default function App(){
   return(
@@ -20,6 +21,7 @@ export default function App(){
         <Route path="/turmas" element={<Turmas/>}/>
         <Route path="/cursos" element={<Cursos/>}/>
         <Route path="/ambientes" element={<Ambientes/>}/>
+        <Route path="/signup" element={<SignUp/>}/>
 
       </Routes>
     </Router>
